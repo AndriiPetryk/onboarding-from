@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { OnboardingFormData } from '../../types/formTypes';
 import InputField from './InputField';
 import PhoneNumberInput from './PhoneNumberInput';
+import Button from 'react-bootstrap/Button';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { validationSchema } from '../../schema/schema';
 import { validateCorporationNumber } from '../../services/api';
@@ -42,9 +43,9 @@ const OnboardingForm: React.FC = () => {
         control={control}
         errors={errors}
       />
-      <button type="submit" className="btn-primary">
+      <Button type="submit" className="btn-primary">
         Submit
-      </button>
+      </Button>
     </form>
   );
 };

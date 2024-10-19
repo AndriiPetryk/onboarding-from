@@ -2,7 +2,7 @@
 import React from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { schema } from '../schema/schema';
+import { validationSchema } from '../schema/schema';
 import axios from 'axios';
 
 interface FormData {
@@ -19,7 +19,7 @@ const FormComponent = () => {
     formState: { errors },
     setError,
   } = useForm<FormData>({
-    resolver: yupResolver(schema),
+    resolver: yupResolver(validationSchema),
   });
 
   // Asynchronous Validation of Corporation Number

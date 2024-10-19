@@ -4,23 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1dbfe5a-d17a-4102-85cb-6bda9ac6979f" name="Changes" comment="added tailwind and postcss">
-      <change afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+    <list default="true" id="d1dbfe5a-d17a-4102-85cb-6bda9ac6979f" name="Changes" comment="added eslint &amp; prettier - fixed components regarding eslint policy">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/FormComponent.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/FormComponent.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form/InputField.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/InputField.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/form/OnboardingForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/OnboardingForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/form/PhoneNumberInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/form/PhoneNumberInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Onboarding.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Onboarding.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/schema/schema.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/schema/schema.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/formTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/formTypes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/validators.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/validators.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +89,7 @@
       <workItem from="1729291653265" duration="3050000" />
       <workItem from="1729301366085" duration="3798000" />
       <workItem from="1729305820455" duration="681000" />
-      <workItem from="1729306518253" duration="1086000" />
+      <workItem from="1729306518253" duration="2365000" />
     </task>
     <task id="LOCAL-00001" summary="added tailwind and postcss">
       <option name="closed" value="true" />
@@ -111,7 +99,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729305862981</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added eslint &amp; prettier - fixed components regarding eslint policy">
+      <option name="closed" value="true" />
+      <created>1729307648712</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1729307648712</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,6 +115,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added tailwind and postcss" />
-    <option name="LAST_COMMIT_MESSAGE" value="added tailwind and postcss" />
+    <MESSAGE value="added eslint &amp; prettier - fixed components regarding eslint policy" />
+    <option name="LAST_COMMIT_MESSAGE" value="added eslint &amp; prettier - fixed components regarding eslint policy" />
   </component>
 </project>
