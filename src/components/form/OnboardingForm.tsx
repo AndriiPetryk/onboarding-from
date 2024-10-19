@@ -1,27 +1,52 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { OnboardingFormData } from '../types/formTypes';
+import { OnboardingFormData } from '../../types/formTypes';
 import InputField from './InputField';
 import PhoneNumberInput from './PhoneNumberInput';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { validationSchema } from '../../schema/schema';
+import { validateCorporationNumber } from '../../services/api';
 
 const OnboardingForm: React.FC = () => {
-    const { handleSubmit, control, formState: { errors } } = useForm<OnboardingFormData>({
-        // Use custom validation schema here
-    });
+  const {
+    handleSubmit,
+    control,
+    formState: { errors },
+  } = useForm<OnboardingFormData>({
+    resolver: yupResolver(validationSchema),
+  });
 
-    const onSubmit = (data: OnboardingFormData) => {
-        // Handle form submission logic
-    };
+  const onSubmit = (data: OnboardingFormData) => {
+    console.log('data', data);
+    validateCorporationNumber('');
+  };
 
-    return (
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-            <InputField name="firstName" label="First Name" control={control} errors={errors} />
-            <InputField name="lastName" label="Last Name" control={control} errors={errors} />
-            <PhoneNumberInput name="phone" control={control} errors={errors} />
-            <InputField name="corporationNumber" label="Corporation Number" control={control} errors={errors} />
-            <button type="submit" className="btn-primary">Submit</button>
-        </form>
-    );
+  return (
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+      <InputField
+        name="firstName"
+        label="First Name"
+        control={control}
+        errors={errors}
+      />
+      <InputField
+        name="lastName"
+        label="Last Name"
+        control={control}
+        errors={errors}
+      />
+      <PhoneNumberInput name="phone" control={control} errors={errors} />
+      <InputField
+        name="corporationNumber"
+        label="Corporation Number"
+        control={control}
+        errors={errors}
+      />
+      <button type="submit" className="btn-primary">
+        Submit
+      </button>
+    </form>
+  );
 };
 
 export default OnboardingForm;
