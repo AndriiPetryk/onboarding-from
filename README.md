@@ -29,12 +29,15 @@ https://onboarding-form-test.netlify.app/
 5. Yup: Schema builder for form validation.
 6. Axios: Used for making API requests.
 7. Jest & React Testing Library: For unit and integration tests to ensure component reliability and form functionality.
+8. ESLint: Linting tool for identifying and fixing potential code errors and enforcing code consistency. 
+9. Prettier: Code formatter that ensures a consistent coding style across the project.
 
 ## Features
 
 1. Dynamic Form Handling: With real-time validation and error handling.
 2. API Integration: Validates corporation numbers and submits profile details.
 3. User-Friendly UI: Built with responsive design using Tailwind CSS.
+4. Code Consistency: Achieved using ESLint and Prettier to enforce code quality and formatting.
 
 ## Tests
 
