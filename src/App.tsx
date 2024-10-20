@@ -1,10 +1,8 @@
-import React from 'react';
-import './App.css';
 import OnboardingForm from './components/form/OnboardingForm';
 
 function App() {
   return (
-    <div className="App">
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <OnboardingForm />
     </div>
   );

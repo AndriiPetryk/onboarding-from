@@ -1,4 +1,5 @@
 // src/types/formTypes.ts
+import { Control } from 'react-hook-form';
 
 export interface OnboardingFormData {
   firstName: string;
@@ -7,18 +8,12 @@ export interface OnboardingFormData {
   corporationNumber: string;
 }
 
-export interface CorporationValidationResponse {
-  corporationNumber: string;
-  valid: boolean;
-  message?: string;
-}
-
-export interface FormSubmissionResponse {
-  message: string;
-  status: number;
-}
-
-export interface FormError {
-  field: string;
-  message: string;
+export interface InputFieldProps {
+  name: keyof OnboardingFormData;
+  label: string;
+  control: Control<OnboardingFormData>;
+  errors: any;
+  type?: string;
+  labelClassName?: string;
+  inputClassName?: string;
 }
