@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { OnboardingFormData } from '../../types/formTypes';
 import InputField from './InputField';
@@ -8,7 +8,6 @@ import {
   submitProfileDetails,
   validateCorporationNumber,
 } from '../../services/api';
-import toast, { Toaster } from 'react-hot-toast';
 
 const OnboardingForm = () => {
   const [formError, setFormError] = useState<string | null>(null);
@@ -42,13 +41,12 @@ const OnboardingForm = () => {
       const submissionResult = await submitProfileDetails(data);
 
       if (!submissionResult.success) {
-        setFormError(submissionResult.error);
+        setFormError(submissionResult.error ?? 'An unknown error occurred');
         setIsSubmitting(false);
         return;
       }
 
       setIsSubmitted(true);
-      toast.success('Form submitted successfully!');
     } catch (error) {
       console.error('Unexpected error:', error);
     } finally {
@@ -58,7 +56,6 @@ const OnboardingForm = () => {
 
   return (
     <div className="w-full sm:max-w-[50%] p-6 space-y-12 bg-white rounded-md border-b border-gray-900/10 pb-12">
-      <Toaster position="bottom-right" reverseOrder={false} />
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="border-b border-gray-900/10 pb-12">
           <h2 className="text-center font-semibold leading-9 text-gray-900">
@@ -115,7 +112,7 @@ const OnboardingForm = () => {
           {isSubmitting
             ? 'Submitting...'
             : isSubmitted
-              ? 'Submitted'
+              ? 'Submitted successfully.'
               : 'Submit'}
         </button>
       </form>

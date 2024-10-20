@@ -17,3 +17,27 @@ export interface InputFieldProps {
   labelClassName?: string;
   inputClassName?: string;
 }
+
+export interface CorporationValidationResponse {
+  valid: boolean;
+  message?: string;
+}
+
+export interface ProfileSubmissionResponse {
+  success: boolean;
+  message?: string;
+}
+
+export interface ApiResponse<T> {
+  success: boolean;
+  data?: T;
+  error?: string;
+}
+
+export interface ApiError {
+  response?: {
+    data?: {
+      message?: string;
+    };
+  };
+}
